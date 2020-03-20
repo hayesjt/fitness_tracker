@@ -2,6 +2,7 @@ const mongoose = require("mongoose");
 
 const Schema = mongoose.Schema;
 
+// this should work automatically when server is running 
 const workoutSchema = new Schema(
   {
     day: {
