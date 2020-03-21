@@ -1,3 +1,4 @@
+// Get the last work out posted
 const API = {
   async getLastWorkout() {
     let res;
@@ -10,6 +11,7 @@ const API = {
 
     return json[json.length - 1];
   },
+  // add new exercise
   async addExercise(data) {
     const id = location.search.split("=")[1];
 
@@ -23,6 +25,7 @@ const API = {
 
     return json;
   },
+  // creating a new workout
   async createWorkout(data = {}) {
     const res = await fetch("/api/workouts", {
       method: "POST",
@@ -34,7 +37,7 @@ const API = {
 
     return json;
   },
-
+// getting workout range
   async getWorkoutsInRange() {
     const res = await fetch(`/api/workouts/range`);
     const json = await res.json();
