@@ -1,5 +1,6 @@
 init();
 
+// gets last workout on initial open
 async function init() {
   if (location.search.split("=")[1] === undefined) {
     const workout = await API.getLastWorkout();
