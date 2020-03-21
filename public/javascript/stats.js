@@ -1,5 +1,4 @@
 // get all workout data from back-end
-
 fetch("/api/workouts/range")
   .then(response => {
     return response.json();
@@ -11,6 +10,7 @@ fetch("/api/workouts/range")
 
 API.getWorkoutsInRange()
 
+// getting color palette for graphs
   function generatePalette() {
     const arr = [
     "#003f5c",
@@ -33,6 +33,7 @@ API.getWorkoutsInRange()
 
   return arr;
   }
+  // creating chart
 function populateChart(data) {
   let durations = duration(data);
   let pounds = calculateTotalWeight(data);
