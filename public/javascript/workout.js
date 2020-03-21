@@ -1,3 +1,4 @@
+// getting last workout
 async function initWorkout() {
   const lastWorkout = await API.getLastWorkout();
   console.log("Last workout:", lastWorkout);
@@ -12,13 +13,14 @@ async function initWorkout() {
       numExercises: lastWorkout.exercises.length,
       ...tallyExercises(lastWorkout.exercises)
     };
-
+// rendering last workout summary
     renderWorkoutSummary(workoutSummary);
   } else {
     renderNoWorkoutText()
   }
 }
 
+// getting all user inputed data on reps, weight, ect.
 function tallyExercises(exercises) {
   const tallied = exercises.reduce((acc, curr) => {
     if (curr.type === "resistance") {
@@ -33,6 +35,7 @@ function tallyExercises(exercises) {
   return tallied;
 }
 
+// formatting date
 function formatDate(date) {
   const options = {
     weekday: "long",
@@ -44,6 +47,7 @@ function formatDate(date) {
   return new Date(date).toLocaleDateString(options);
 }
 
+// what the workout summary actually consists of
 function renderWorkoutSummary(summary) {
   const container = document.querySelector(".workout-stats");
 
@@ -71,6 +75,7 @@ function renderWorkoutSummary(summary) {
   });
 }
 
+// what workout text actually constists of
 function renderNoWorkoutText() {
   const container = document.querySelector(".workout-stats");
   const p = document.createElement("p");
