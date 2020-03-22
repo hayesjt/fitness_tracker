@@ -4,19 +4,16 @@ const express = require("express");
 const mongoose = require("mongoose");
 const logger = require("morgan");
 
-
-// WEBSITE DEPLOYED ON GIVEN PORT OR 8080 IF LOCAL
+// WEBSITE DEPLOYED ON GIVEN PORT OR 8080
 const PORT = process.env.PORT || 8080;
 
 // EXPRESS METHOD = APP
 const app = express();
 
-
 // ENCODED JSON - NEEDED
 app.use(logger("dev"));
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
-
 
 // LETTING APPLICATION KNOW THERE IS A PUBLIC FOLDER 
 app.use(express.static("public"));
@@ -27,7 +24,6 @@ mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/workout", {
   useFindAndModify: false,
   useUnifiedTopology: true 
 });
-
 
 // REQUIRING ROUTES FOR PAGES TO WORK
 require("./routes/htmlRoutes.js")(app);
