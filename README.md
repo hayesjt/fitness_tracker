@@ -1,2 +1,4 @@
 # fitness_tracker
-Fitness tracker using node, MonogDB, JavaScript
+This fitness tracker uses a MongoDB to add and keep strack of workouts. Charts.js is then used to show stats.
+
+
