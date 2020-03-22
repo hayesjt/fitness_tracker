@@ -1,5 +1,6 @@
 var path = require("path");
 
+// all routes for each page
 module.exports = function (app) {
 
     app.get("/", function (req, res) {
