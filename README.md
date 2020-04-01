@@ -9,7 +9,7 @@
     -Overall Pouds lifted
     -Overall time spent on all items
 
-    Log your fitness at https://arcane-meadow-05080.herokuapp.com/?id=5e76b6835ed53700179baeb8
+    Log your fitness at [Fitness Tracker](https://arcane-meadow-05080.herokuapp.com/?id=5e76b6835ed53700179baeb8)
 
 # Future Add's
 
